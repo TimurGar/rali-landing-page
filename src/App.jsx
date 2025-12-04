@@ -124,15 +124,15 @@ function App() {
             </div>
           </Dialog>
 
-          <div className="flex items-center min-h-[calc(100vh-8rem)]">
+          <div className="flex items-center mt-10">
             <div className="flex flex-col md:flex-row md:gap-8 md:items-start md:justify-between gap-4 w-full">
               {/* left side */}
               <div className="flex-1 md:my-16">
-                <h1 className="text-6xl font-bold text-white">
+                <h1 className="text-6xl font-semibold text-white">
                   Canned coffee <br /> like never before
                 </h1>
                 <div className="mt-10">
-                  <div className="max-w-80 mx-auto">
+                  <div className="max-w-100 mx-auto">
                     <form onSubmit={handleSubmit}>
                       {/* <p className="text-lg text-neutral-600 flex my-2">
                       I am interested
