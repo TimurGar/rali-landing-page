@@ -65,7 +65,7 @@ function App() {
         }}
       >
         <div className="max-w-6xl mx-auto p-4 h-full">
-          <p className="text-white font-lg mt-2">@Rali</p>
+          <p className="text-white font-lg mt-2">@ralithetroops</p>
           <Analytics />
 
           {/* message */}
@@ -134,7 +134,10 @@ function App() {
                 </h1>
                 <div className="mt-10">
                   <div className="max-w-100 mx-auto ">
-                    <form onSubmit={handleSubmit} className="flex flex-row gap-4">
+                    <form
+                      onSubmit={handleSubmit}
+                      className="flex flex-row gap-4"
+                    >
                       {/* <p className="text-lg text-neutral-600 flex my-2">
                       I am interested
                     </p> */}
@@ -154,7 +157,7 @@ function App() {
 
                       <button
                         type="submit"
-                        className="flex my-2 items-center justify-center h-10 px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-nonefocus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-br from-[#d8d8da] to-[#ffffff] text-black shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]"
+                        className="px-4 py-1 rounded-lg transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 bg-white text-black border-2 border-white hover:bg-transparent hover:text-white shadow-lg"
                         disabled={isLoading}
                       >
                         {isLoading ? "Subscribing..." : "Waitlist"}
