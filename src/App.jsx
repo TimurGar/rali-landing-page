@@ -135,7 +135,7 @@ function App() {
             </div>
           </Dialog>
 
-          <div className="flex items-center mt-50 md:mt-6">
+          <div className="flex items-center mt-40 md:mt-6">
             <div className="flex flex-col md:flex-row md:gap-8 md:items-start md:justify-between gap-4 w-full">
               {/* left side */}
               <div className="flex-1 md:my-16">
