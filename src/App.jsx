@@ -80,7 +80,7 @@ function App() {
 
           {/* message */}
           <Dialog
-            open={isOpen}
+            open={true}
             as="div"
             className="relative z-10 focus:outline-none"
             onClose={close}
@@ -99,18 +99,18 @@ function App() {
                   </DialogTitle>
 
                   <p className="mt-2">
-                    Your email has been{" "}
+                    You have {" "}
                     {message.includes("Successfully")
-                      ? "successfully subscribed!"
-                      : "already subscribed!"}
+                      ? "successfully waitlisted!"
+                      : "already waitlisted!"}
                   </p>
                   <p className="mt-2">
                     {message.includes("Successfully")
-                      ? "You will now your first SpiderBytesV2 tomorrow."
+                      ? "Please be sure to check your email for further updates."
                       : "Please try a different email address."}
                   </p>
 
-                  <div class="mt-8 p-4 rounded-lg bg-blue-50 text-blue-700 border border-blue-200">
+                  {/* <div class="mt-8 p-4 rounded-lg bg-blue-50 text-blue-700 border border-blue-200">
                     <div class="flex items-start gap-2">
                       <span class="flex-shrink-0">✉️</span>
                       <div class="flex-1">
@@ -119,7 +119,7 @@ function App() {
                         see the email in your inbox.
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="mt-4">
                     <Button
