@@ -13,7 +13,7 @@ function App() {
   let [isOpen, setIsOpen] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Stop the form from refreshing the page
+    e.preventDefault();
     console.log("Email submitted:", email);
     setIsLoading(true);
 
@@ -34,12 +34,14 @@ function App() {
         setEmail("");
       } else {
         // Error (status 409, 400, etc.)
-        setMessage(result.message); // "Email already subscribed!"
+        setMessage(result.message);
       }
 
       setIsOpen(true);
     } catch (error) {
-      setMessage("Error: ", error);
+      console.error("Fetch error:", error);
+      setMessage("Error connecting to server. Please try again.");
+      setIsOpen(true);
     } finally {
       setIsLoading(false);
     }
