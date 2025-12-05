@@ -80,7 +80,7 @@ function App() {
 
           {/* message */}
           <Dialog
-            open={true}
+            open={isOpen}
             as="div"
             className="relative z-10 focus:outline-none"
             onClose={close}
@@ -135,11 +135,11 @@ function App() {
             </div>
           </Dialog>
 
-          <div className="flex items-center mt-6">
+          <div className="flex items-center mt-50 md:mt-6">
             <div className="flex flex-col md:flex-row md:gap-8 md:items-start md:justify-between gap-4 w-full">
               {/* left side */}
               <div className="flex-1 md:my-16">
-                <h1 className="text-8xl font-semibold text-white">
+                <h1 className="text-5xl md:text-8xl font-semibold text-white">
                   Canned coffee <br /> like never before
                 </h1>
                 <div className="mt-10">
