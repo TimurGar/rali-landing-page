@@ -3,8 +3,8 @@ import { MongoClient } from "mongodb";
 export default async function handler(req, res) {
   console.log("Someone called my API!");
 
-    console.log("MongoDB URI:", process.env.MONGODB_CONNECTION_STRING);
-  
+  console.log("MongoDB URI:", process.env.MONGODB_CONNECTION_STRING);
+
   // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -17,7 +17,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    const client = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
+    const client = new MongoClient(process.env.MONGODB_CONNECTION_STRING, {
+      serverSelectionTimeoutMS: 5000,
+    });
     await client.connect();
 
     // Create/access database and collection
