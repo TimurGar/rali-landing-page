@@ -65,6 +65,7 @@ function App() {
         }}
       >
         <div className="max-w-6xl mx-auto p-4 h-full">
+          <p className="text-white font-lg mt-2">@Rali</p>
           <Analytics />
 
           {/* message */}
@@ -124,16 +125,16 @@ function App() {
             </div>
           </Dialog>
 
-          <div className="flex items-center mt-10">
+          <div className="flex items-center mt-6">
             <div className="flex flex-col md:flex-row md:gap-8 md:items-start md:justify-between gap-4 w-full">
               {/* left side */}
               <div className="flex-1 md:my-16">
-                <h1 className="text-6xl font-semibold text-white">
+                <h1 className="text-8xl font-semibold text-white">
                   Canned coffee <br /> like never before
                 </h1>
                 <div className="mt-10">
-                  <div className="max-w-100 mx-auto">
-                    <form onSubmit={handleSubmit}>
+                  <div className="max-w-100 mx-auto ">
+                    <form onSubmit={handleSubmit} className="flex flex-row gap-4">
                       {/* <p className="text-lg text-neutral-600 flex my-2">
                       I am interested
                     </p> */}
@@ -141,22 +142,22 @@ function App() {
                         animatedTexts="name.lastname@richmond.edu"
                         textColors={"#0E0E0E"}
                         typingSpeed={150}
-                        className=""
                         value={email}
                         type="email"
                         pattern=".*@*"
                         title="Must be a valid email address"
                         onChange={(e) => setEmail(e.target.value)}
+                        className="w-full md:w-72 lg:w-96"
                         required
                         disabled={isLoading}
                       />
 
                       <button
                         type="submit"
-                        className="flex my-2 items-center justify-center h-10 px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-br from-[#3B4697] to-[#485AE3] text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]"
+                        className="flex my-2 items-center justify-center h-10 px-4 py-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-nonefocus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-br from-[#d8d8da] to-[#ffffff] text-black shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]"
                         disabled={isLoading}
                       >
-                        {isLoading ? "Subscribing..." : "I am interested"}
+                        {isLoading ? "Subscribing..." : "Waitlist"}
                       </button>
                     </form>
                   </div>

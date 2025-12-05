@@ -43,8 +43,8 @@ const InputWithAnimatedPlaceholder = ({
           onBlur={() => setIsFocused(false)}
           required={required}
           disabled={disabled}
-          className="flex h-10 w-full border border-gray-300 bg-white text-black rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 relative z-10"
-          style={{ background: shouldShowAnimation ? "transparent" : "white" }}
+          className="flex h-10 w-full border border-white text-white rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 relative z-10"
+          style={{ background: shouldShowAnimation ? "transparent" : "transparent" }}
           {...props}
         />
 
@@ -54,9 +54,9 @@ const InputWithAnimatedPlaceholder = ({
               text={animatedTexts}
               textColors={textColors}
               typingSpeed={typingSpeed}
-              className="text-gray-400"
+              className="text-white"
               showCursor={true}
-              cursorClassName="text-gray-400"
+              cursorClassName="text-white"
             />
           </div>
         )}
