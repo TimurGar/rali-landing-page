@@ -15,9 +15,11 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Email submitted:", email);
+    console.log("Setting loading to true");
     setIsLoading(true);
 
     try {
+      console.log("Sending fetch request to /api/subscribe");
       const response = await fetch("/api/subscribe", {
         method: "POST",
         headers: {
@@ -26,8 +28,12 @@ function App() {
         body: JSON.stringify({ email: email }),
       });
 
+      console.log("Response status:", response.status);
+      console.log("Response ok:", response.ok);
+
       // Get the actual message from API
       const result = await response.json();
+      console.log("API result:", result);
 
       if (response.ok) {
         setMessage(result.message);
@@ -38,11 +44,13 @@ function App() {
       }
 
       setIsOpen(true);
+      console.log("Dialog opened");
     } catch (error) {
       console.error("Fetch error:", error);
       setMessage("Error connecting to server. Please try again.");
       setIsOpen(true);
     } finally {
+      console.log("Setting loading to false");
       setIsLoading(false);
     }
   };
